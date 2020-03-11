@@ -1,0 +1,27 @@
+CSS 박스모델
+
+- 블록레벨 요소와 인라인레벨 요소의 margin과 padding
+  - 블록레벨: 상하좌우로 적용
+  - 인라인레벨: 좌우만 적용
+  - width와 height 속성으로 블록레벨 요소의 크기 설정 (인라인 레벨 요소에는 적용 안됌)
+    - 정확한 요소의 크기: width(height) + padding + margin + border-weight
+- margin 겹침
+  - 연속되는 블록레벨 요소에 모두 margin 적용시 두 개의 margin 겹침
+    - 예: 윗 요소에 margin-bottom: 30px;, 아랫요소에 margin-top:20px;을 주면 두 요소 사이 간격은 50px이 아니라 큰값 30px로 두 마진이 겹쳐진다.
+- position
+  - 상대위치
+    - position: relative;
+    - top: 10px; left: 10px; : 원래 위치에서 아래로 10px, 오른쪽으로 10px 이동
+  - 절대위치
+    - position: absolute;
+    - 어떤 요소가 절대위치로 포지셔닝이 되면 나머지 요소들과 z-index값이 달라져 다른 요소들끼리 자동 정렬이 된다.
+    - z-index
+      - 속성값: 정수
+      - 속성값이 높게 설정 될 수록 앞에 배치
+      - 미 설정시 HTML 문서에서 요소가 나타난 순서대로 위에 제시됨
+  - 고정위치
+    - position: fixed;
+    - 부모 좌표를 넘어서 브라우저 원점에 정학되는 고정위치
+    - 부모요소 위치 및 문서 스크롤 등에 영향을 받지 않음
+  - 기타 위치 속성
+    - float, display 등
